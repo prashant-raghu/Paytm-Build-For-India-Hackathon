@@ -1,0 +1,26 @@
+<div style="background-color: black;padding-top: 60px"></div>
+
+
+<div class="main-content" style="margin-top:50px;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" style="background-color: #27293d;">
+        <div class="card-header">
+          <h4 class="title" style="color: #e2438d;">Select Room to enter</h4>
+        </div>
+        <div class="card-body all-icons">
+          <div class="row">
+            <ng-container *ngFor="let room of rooms">
+              <div style="cursor:pointer;" class="hovr font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6" (click)="redir(room.roomid,room.value.roomNumber)" >
+                <div class="font-icon-detail">
+                  <h3 style="color: white;">Room</h3>
+                  <p style="color: white; z-index: 100;transform: scale(1.5);" >{{room.value.roomNumber}}</p>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
